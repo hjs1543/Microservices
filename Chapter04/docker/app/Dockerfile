@@ -20,7 +20,7 @@ RUN python3 -m venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
 RUN pip3 install --upgrade pip
 RUN pip3 uninsall werkzeug
-RUN pip3 install werkzeug=0.16.1
+RUN pip3 install werkzeug==0.16.1
 
 # Install and compile uwsgi
 RUN pip3 install uwsgi==2.0.18
