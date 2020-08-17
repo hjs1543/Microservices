@@ -19,7 +19,7 @@ RUN python3 -m venv /opt/venv
 # Make sure we use the virtualenv:
 ENV PATH="/opt/venv/bin:$PATH"
 RUN pip3 install --upgrade pip
-RUN pip3 uninsall werkzeug
+RUN pip3 uninstall werkzeug
 RUN pip3 install werkzeug==0.16.1
 
 # Install and compile uwsgi
