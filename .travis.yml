@@ -54,11 +54,11 @@ jobs:
       on:
         tags: true
     - provider: script
-      script: docker push hjs1543/thoughts-backend_db:$TRAVIS_BRANCH
+      script: docker push hjs1543/thoughts_backend_db:$TRAVIS_BRANCH
       on:
         branch: master
     - provider: script
-      script: docker push hjs1543/thoughts-backend_db:$TRAVIS_TAG
+      script: docker push hjs1543/thoughts_backend_db:$TRAVIS_TAG
       on:
         tags: true
 
