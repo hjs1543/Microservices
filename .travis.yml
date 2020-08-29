@@ -40,9 +40,9 @@ jobs:
     - docker push hjs1543/thoughts-backend:$GIT_SHA
     - docker tag thoughts_server:latest hjs1543/thoughts-backend:$TRAVIS_BRANCH
     - docker-compose build db
-    - docker tag db:latest hjs1543/thoughts_backend_db:$GIT_SHA
+    - docker tag thoughts_backend_db:latest hjs1543/thoughts_backend_db:$GIT_SHA
     - docker push hjs1543/thoughts_backend_db:$GIT_SHA
-    - docker tag db:latest hjs1543/thoughts_backend_db:$TRAVIS_BRANCH
+    - docker tag thoughts_backend_db:latest hjs1543/thoughts_backend_db:$TRAVIS_BRANCH
 
     deploy:
     - provider: script
