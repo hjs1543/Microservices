@@ -18,8 +18,8 @@ spec:
         spec:
             containers:
                 - name: thoughts-backend-service
-                  image: thoughts_server:latest
-                  imagePullPolicy: Never
+                  image: hjs1543/thoughts-backend:latest
+                  imagePullPolicy: Always
                   ports:
                      - containerPort: 8000
                   env:
@@ -37,6 +37,7 @@ spec:
                         value: "127.0.0.1"
 
                 - name: thoughts-backend-db
-                  image: thoughts_backend_db:latest
+                  image: hjs1543/thoughts_backend_db:latest
                   imagePullPolicy: Always
-
+            imagePullSecrets:
+                - name: dockersecret
