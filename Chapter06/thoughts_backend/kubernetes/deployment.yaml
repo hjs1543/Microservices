@@ -38,5 +38,5 @@ spec:
 
                 - name: thoughts-backend-db
                   image: thoughts_backend_db:latest
-                  imagePullPolicy: Never
+                  imagePullPolicy: Always
 
