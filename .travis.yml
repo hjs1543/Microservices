@@ -36,9 +36,9 @@ jobs:
     script:
     - cd Chapter06/thoughts_backend
     - docker-compose build server
-    - docker tag thoughts_server:latest hjs1543/thoughts-backend:$GIT_SHA
+    - docker tag thoughts_server:latest hjs1543/thoughts_server:$GIT_SHA
     - docker push hjs1543/thoughts-backend:$GIT_SHA
-    - docker tag thoughts_server:latest hjs1543/thoughts-backend:$TRAVIS_BRANCH
+    - docker tag thoughts_server:latest hjs1543/thoughts_server:$TRAVIS_BRANCH
     - docker-compose build db
     - docker tag thoughts_backend_db:latest hjs1543/thoughts_backend_db:$GIT_SHA
     - docker push hjs1543/thoughts_backend_db:$GIT_SHA

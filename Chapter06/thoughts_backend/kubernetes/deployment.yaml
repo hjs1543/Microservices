@@ -18,7 +18,7 @@ spec:
         spec:
             containers:
                 - name: thoughts-backend-service
-                  image: hjs1543/thoughts-backend:latest
+                  image: hjs1543/thoughts_server:latest
                   imagePullPolicy: Always
                   ports:
                      - containerPort: 8000
